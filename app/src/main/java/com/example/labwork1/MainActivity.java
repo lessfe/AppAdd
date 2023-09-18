@@ -16,10 +16,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         Button button = findViewById(R.id.button);
+        Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
+
         EditText editTextNumber = findViewById(R.id.editTextNumber);
         EditText editTextNumber3 = findViewById(R.id.editTextNumber3);
+
         editTextNumber3.setFocusable(false);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        Button button2 = findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,11 +46,26 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this, MainActivity2.class);
-
-                myIntent.putExtra("key", editTextNumber3.getText().toString());
-                MainActivity.this.startActivity(myIntent);
+                    Intent myIntent = new Intent(MainActivity.this, MainActivity2.class);
+                    myIntent.putExtra("key", editTextNumber3.getText().toString());
+                    MainActivity.this.startActivity(myIntent);
             }
         });
     }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        TextView textView2 = findViewById(R.id.textView2);
+        textView2.setText(savedInstanceState.getString("myText"));
+
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        TextView textView2 = findViewById(R.id.textView2);
+        super.onSaveInstanceState(outState);
+        outState.putString("myText", textView2.getText().toString());
+
+    }
+
 }
