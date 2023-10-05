@@ -15,7 +15,7 @@
         android:layout_marginStart="72dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="8dp"
-        android:text="Значение"
+        android:text="@string/Value"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber3"

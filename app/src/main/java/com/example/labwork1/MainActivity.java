@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState){
         super.onRestoreInstanceState(savedInstanceState);
@@ -67,5 +66,5 @@ public class MainActivity extends AppCompatActivity {
         outState.putString("myText", textView2.getText().toString());
 
     }
-
+    // daasdasdsad
 }

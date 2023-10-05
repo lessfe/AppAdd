@@ -4,6 +4,7 @@ import static com.example.labwork1.R.id.editTextNumber3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,4 +41,5 @@ public class MainActivity2 extends MainActivity {
         outState.putString("myText", textView2.getText().toString());
 
     }
+
 }
