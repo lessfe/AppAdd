@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 float sumNumRed = Float.parseFloat(editTextNumber.getText().toString()) - Float.parseFloat(editTextNumber3.getText().toString());
-                String str_sum = "-" + sumNumRed;
+                String str_sum = "" + sumNumRed;
                 editTextNumber3.setText(str_sum);
 
             }
